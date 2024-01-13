@@ -43,3 +43,22 @@ The provided Solidity code (`decentralisedVoting.sol`) implements a decentralize
 ### 3.5 Timestamp Validation:
 
 - The contract checks timestamps to ensure that actions are performed within the appropriate time frames. This guards against actions occurring before or after the specified election period.
+
+# Test Script
+
+The testing of contract is made via "Foundry" framework
+The test smart contract is located in the ./test folder 
+
+To launch the test script, if foundry is not installed in the system, install foundry by typing the command-
+`curl -L https://foundry.paradigm.xyz | bash`
+
+then, install openzeppelin dependencies by typing command-
+`forge install OpenZeppelin/openzeppelin-contracts`
+
+if there is problem "Openzeppelin-contracts" not found, type- 
+`forge remappings > remappings.txt`
+which creates a remappings.txt file inside the root directory of the project
+
+Now to launch the script, simply type-
+`forge test -vvv`
+The above script would show the outputs and pass conditions of the test, if you want to see the transaction traces, simply add an extra "v" in the script at last.
